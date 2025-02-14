@@ -37,14 +37,14 @@ jobs:
             pwd
             if [ ! -d "fastapi-book-project-noah" ]; then
               git clone https://github.com/Noah-V/noah-fastapi-book-project
-              cd fastapi-book-project-noah
+              cd noah-fastapi-book-project
             else
-              cd fastapi-book-project-noah
+              cd noah-fastapi-book-project
             fi
             pwd
             git pull origin main
             sudo apt-get install -y python3-venv
-            python3 -m venv /home/ubuntu/fastapi-hng/fastapi-book-project-noah/venv
+            python3 -m venv /home/ubuntu/fastapi-hng/noah-fastapi-book-project/venv
             source venv/bin/activate
             pip install -r requirements.txt
             
@@ -56,9 +56,9 @@ jobs:
 
             [Service]
             User=ubuntu
-            WorkingDirectory=/home/ubuntu/fastapi-hng/fastapi-book-project-noah
-            Environment="PATH=/home/ubuntu/fastapi-hng/fastapi-book-project-noah/venv/bin"
-            ExecStart=/home/ubuntu/fastapi-hng/fastapi-book-project-noah/venv/bin/uvicorn main:app --host 0.0.0.0 --port 8000
+            WorkingDirectory=/home/ubuntu/fastapi-hng/noah-fastapi-book-project
+            Environment="PATH=/home/ubuntu/fastapi-hng/noah-fastapi-book-project/venv/bin"
+            ExecStart=/home/ubuntu/fastapi-hng/noah-fastapi-book-project/venv/bin/uvicorn main:app --host 0.0.0.0 --port 8000
 
             [Install]
             WantedBy=multi-user.target
