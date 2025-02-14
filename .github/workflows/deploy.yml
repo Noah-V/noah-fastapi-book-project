@@ -34,12 +34,13 @@ jobs:
               mkdir -p /home/ubuntu/fastapi-hng
             fi 
             cd /home/ubuntu/fastapi-hng
-            if [ ! -d ".git" ]; then
+            if [ ! -d "fastapi-book-project-noah" ]; then
               git clone https://github.com/Noah-V/fastapi-book-project-noah.git
+              cd fastapi-book-project-noah
             else
-              git pull origin main
+              cd fastapi-book-project-noah
             fi
-            cd fastapi-book-project-noah
+            git pull origin main
             sudo apt-get install -y python3-venv
             python3 -m venv /home/ubuntu/fastapi-hng/fastapi-book-project-noah/venv
             source venv/bin/activate
