@@ -1,4 +1,4 @@
-name: ci pipeline
+name: CI PIPELINE FOR HNG FAST API
 
 on:
   pull_request:
