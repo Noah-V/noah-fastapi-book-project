@@ -35,7 +35,7 @@ jobs:
             fi 
             cd /home/ubuntu/fastapi-hng
             if [ ! -d "fastapi-book-project-noah" ]; then
-              git clone https://github.com/Noah-V/fastapi-book-project-noah.git
+              git clone https://github.com/Noah-V/noah-fastapi-book-project
               cd fastapi-book-project-noah
             else
               cd fastapi-book-project-noah
