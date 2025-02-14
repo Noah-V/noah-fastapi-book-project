@@ -22,7 +22,4 @@ async def health_check():
     """Checks if server is active."""
     return {"status": "active"}
 
-@app.get("/stage2")
-async def stage2():
-    """Sample endpoint for stage 2."""
-    return {"status": "This is a sample for stage 2"}
+
